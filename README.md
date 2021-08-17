@@ -1,4 +1,4 @@
-# Slacker
+# Stacker
 
 Display a list of Stack Overflow users
 
