@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Stacker
+
+  Created by Matthew on 8/16/21.
+  
+*/
+
+"nav-bar-title"         =   "Stack Overflow Users";
+"action-sheet-title"    =   "UPDATE USER DATA";
+"action-sheet-message"  =   "Select a source";
+"server-data"           =   "Server Data";
+"local-data"            =   "Local Data";
+"core-data"             =   "Core Data";
+"alert-title"           =   "TODO";
+"alert-message"         =   "Core Data coming soon!";
+"join-date %@"          =   "Joined %@";
+"user-page"             =   "User Page";
+"home-page"             =   "Home Page";
+"user-profile"          =   "User Profile";
