@@ -29,12 +29,18 @@ struct UserModel: Codable, Identifiable {
     var displayName: String // display_name
     var reputation: Int // reputation
     var badgeCounts: BadgeCounts // badge_counts
-    var websiteUrl: String // website_url
     private var location: String? // location
     var locationName: String {
         location ?? ""
     }
-    var link: String // link
+    private var websiteUrl: String? // website_url
+    var userWebsite: String {
+        websiteUrl ?? ""
+    }
+    private var link: String? // link
+    var userLink: String {
+        link ?? ""
+    }
     private var creationDate: Int // creation_date
     var joinDate: String {
         let formatter = DateFormatter()

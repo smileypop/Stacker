@@ -49,17 +49,31 @@ struct UserDetail: View {
                 Divider()
                 
                 HStack {
-                    Link(destination: URL(string: user.link)!) {
-                        Image(systemName: "person.circle.fill")
-                            .font(.title3)
-                        Text("user-page")
-                    }
+                    if let link = user.userLink, let url = URL(string: link) {
+                        Link(destination: url) {
+                            Image(systemName: "person.circle.fill")
+                                .font(.title3)
+                            Text("user-page")
+                        }} else {
+                            Button(action: {}, label: {
+                                Image(systemName: "person.circle.fill")
+                                    .font(.title3)
+                                Text("user-page")
+                            }).disabled(true)
+                        }
                     Spacer()
-                    Link(destination: URL(string: user.websiteUrl)!) {
-                        Image(systemName: "link.circle.fill")
-                            .font(.title3)
-                        Text("home-page")
-                    }
+                    if let link = user.userWebsite, let url = URL(string: link) {
+                        Link(destination: url) {
+                            Image(systemName: "link.circle.fill")
+                                .font(.title3)
+                            Text("home-page")
+                        }} else {
+                            Button(action: {}, label: {
+                                Image(systemName: "link.circle.fill")
+                                    .font(.title3)
+                                Text("home-page")
+                            }).disabled(true)
+                        }
                 }
             }
             .offset(x: 0, y: -92)
